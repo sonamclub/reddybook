@@ -62,6 +62,23 @@
   .right{text-align:right}
   .pos{color:var(--green);font-weight:700}
   .info .small{background:#111827;color:#fff;border:none;border-radius:6px;padding:7px 10px}
+
+/* === Mobile & Desktop compatibility tweaks === */
+img{max-width:100%;height:auto}
+.table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+.table-scroll table{min-width: 900px}
+@media (max-width: 1100px){
+  .layout{grid-template-columns:1fr !important}
+  .side{display:none !important}
+  .filters{grid-template-columns:1fr 1fr !important}
+  .top,.nav{overflow-x:auto}
+}
+@media (max-width: 640px){
+  .filters{grid-template-columns:1fr !important}
+  .btn,.submit{width:100%}
+  th,td{white-space:nowrap}
+}
+
 </style>
 </head>
 <body>
@@ -138,7 +155,7 @@
           <button class="submit">SUBMIT</button>
         </div>
 
-        <table>
+        <div class="table-scroll"><table>
           <thead>
             <tr>
               <th style="width:60px">No</th>
@@ -163,7 +180,7 @@
             <tr><td>9</td><td>20/07/2025 08:48:43 PM</td><td>MAC88-CAV101-VR [3b59c2a3-16b6-4f9f-833c-cfa48cb1c5bc]</td><td class="right">0.00</td><td class="right">0.00</td><td class="right">1100.00</td><td class="right pos">6336.52</td><td class="info"><button class="small">SHOW BETS</button></td></tr>
             <tr><td>10</td><td>20/07/2025 07:54:46 PM</td><td>Zimbabwe v South Africa</td><td class="right">0.00</td><td class="right">0.00</td><td class="right">203.92</td><td class="right pos">1174.67</td><td class="info"><button class="small">SHOW BETS</button></td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
   </div>
